@@ -1,0 +1,21 @@
+<h1>Add a review</h1>
+
+
+<%= form_for [@restaurant, @review] do |f|%>
+<div>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, in: (1..5) %>
+</div>
+&nbsp;
+
+<div>
+  <%= f.submit 'Submit' %>
+</div>
+<% end %>
+
+<p><%= link_to "Home", root_path(@question)%></p>

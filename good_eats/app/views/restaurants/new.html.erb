@@ -1,0 +1,45 @@
+<h1>Add a restaurant</h1>
+
+
+<%= form_for [@restaurant] do |f|%>
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :state %>
+  <%= f.text_field :state %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :zipcode %>
+  <%= f.text_field :zipcode %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</div>
+&nbsp;
+<div>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+</div>
+&nbsp;
+<div>
+  <%= f.submit 'Submit' %>
+</div>
+<% end %>
+
+<p><%= link_to "Home", root_path(@question)%></p>
